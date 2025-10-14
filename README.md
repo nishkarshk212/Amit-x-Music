@@ -1,17 +1,4 @@
 ━━━━━━━━━━━━━━━━
-### 🌷𝐕𝐈𝐒𝐈𝐓𝐎𝐑𝐒🌷
-
-<!--
-**TeamAloneOp/AloneX** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-
-<p align="center">
-    <b>ᴠɪsɪᴛᴏʀs</b><br>
- -->    <img align="middle" src="https://profile-counter.glitch.me/TeamAloneOp/count.svg" />
-</p>
-
-
-
 
 <h2 align="center">
     𖢵 ᴀʅσηҽ χ мυѕι¢ 𖢵
