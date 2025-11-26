@@ -7,7 +7,7 @@ import requests
 import yt_dlp
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
-from youtubesearchpython.__future__ import VideosSearch
+from py_yt import VideosSearch
 from AloneX.utils.database import is_on_off
 from AloneX import akash
 from AloneX.utils.formatters import time_to_seconds
