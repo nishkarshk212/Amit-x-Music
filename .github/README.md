@@ -55,10 +55,6 @@ Built with Python, Pyrogram, and Py-TgCalls, it’s optimized for reliability an
 
 <h2>☁️ Manual Deployment</h2>
 
-<h3>✔️ Prerequisites</h3>
-7. 
-
-
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 
