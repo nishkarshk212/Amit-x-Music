@@ -25,9 +25,9 @@ Supports YouTube, Spotify, Resso, Apple Music, SoundCloud and M3U8 links.
 </a>
 
 
-<p align="center">
-  <img src="https://litter.catbox.moe/v97ciy.jpg">
-</p>
+#<p align="center">
+#  <img src="https://litter.catbox.moe/v97ciy.jpg">
+#</p>
 
 
 
