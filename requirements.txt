@@ -1,3 +1,4 @@
+#ALONE-CODER
 aiohttp~=3.13.3
 kurigram>=2.2.19
 pillow~=12.2.0
