@@ -2,6 +2,7 @@
 # Licensed under the MIT License.
 # This file is part of AloneXMusic
 # ALONE-CODER
+# Fuck Baby
 
 import json
 import hashlib
