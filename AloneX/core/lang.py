@@ -58,7 +58,7 @@ class Language:
                     original_data = zlib.decompress(compressed_data)
 
                     actual_hash = hashlib.sha256(original_data).hexdigest()
-                    expected_hash = "a8d9fc7feed25f44a794a94364ca95fd301acd30bfaf5cf32c7c02e6c6f117df"
+                    expected_hash = "2162418a13685ff31b09e734656d9881dcff0c2ad13886d02d6c69ba4182dd50"
 
                     if actual_hash != expected_hash:
                         logger.error("EN language file integrity check failed!")
