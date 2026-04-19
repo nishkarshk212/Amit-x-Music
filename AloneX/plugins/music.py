@@ -5,7 +5,7 @@
 
 from pyrogram import filters, types
 from AloneX import app
-from config import BANNED_USERS, adminlist, lyrical
+from config import adminlist, lyrical
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 MONGO_URL = getenv("MONGO_URL", "")
 SESSION = getenv("SESSION", "")
