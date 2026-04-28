@@ -9,18 +9,18 @@ class Config:
         self.API_ID = int(getenv("API_ID", "17596251"))
         self.API_HASH = getenv("API_HASH", "e58343b4c0193e293e391daf97603fcd")
 
-        self.BOT_TOKEN = getenv("BOT_TOKEN", "8564248095:AAFK2VNoZWi8aSOQpsuUCA_zJSpNU95QHxk")
-        self.MONGO_URL = getenv("MONGO_URL", "mongodb+srv://deidaraasui12_db_user:lFMu0uvvRI5Kv86r@stark.yrjtl3r.mongodb.net/?appName=Stark")
+        self.BOT_TOKEN = getenv("BOT_TOKEN", "Apna Bot Token")
+        self.MONGO_URL = getenv("MONGO_URL", "Apna Mongo Db Dalo")
 
-        self.LOGGER_ID = int(getenv("LOGGER_ID", "-1002488365579"))
-        self.OWNER_ID = int(getenv("OWNER_ID", "7732395523"))
+        self.LOGGER_ID = int(getenv("LOGGER_ID", "Apna Log Group Id Dalo"))
+        self.OWNER_ID = int(getenv("OWNER_ID", "Owner I'd dalo"))
         
-        self.SESSION1 = getenv("SESSION", "BQIOHzIAVIBrzGyeU0Eqymp7AtOR6sMrlmyoELkEKhfJYo6DNxtoM7UJoqTmNOwN7tC3uVAHRK3CsRXKtiy-j77C_-OlQvtcztKDpbKdCg5RGpV6DMV64dUmhQgNPp-HlaTxkWKktJoQ-wux0G67IFy1uruTJ5RkG8G4jO2EbAOUV5tjRGha_lqxh6e6CnZyIKWX730nwBdSEn_Qo9-lU68AZbPNvhfn4Z5mAzrNL1Jyw__XmVdn1_IPMGn-2sNGUgq3pDcjxCtjeINigjX1OdxIPCCpZ7rL-ZB1VN-R9BGYkz9h8l0Zl1EvuBtd2IzBnmaTqRZ7rj4yRDqXQfl405IYteCT8AAAAAIAQAF8AA")
+        self.SESSION1 = getenv("SESSION", "Apna String Dalo")
         self.SESSION2 = getenv("SESSION2", None)
         self.SESSION3 = getenv("SESSION3", None)
 
-        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/textables")
-        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/textables")
+        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/AloneUpdates")
+        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/AloneBotSupport")
 
         self.AUTO_END: bool = getenv("AUTO_END", False)
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", False)
