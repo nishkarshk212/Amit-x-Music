@@ -81,7 +81,7 @@ class Inline:
             rows = [
                 [
                     self.ikb(text=_lang["back"], callback_data="help back", style=ButtonStyle.PRIMARY),
-                    self.ikb(text=_lang["close"], callback_data="help close", style=ButtonStyle.PRIMARY),
+                    self.ikb(text=_lang["close"], callback_data="help close", style=ButtonStyle.DANGER),
                 ]
             ]
         else:
@@ -94,7 +94,7 @@ class Inline:
             rows.append(
                 [
                     self.ikb(text=_lang["back"], callback_data="help_back_start", style=ButtonStyle.PRIMARY),
-                    self.ikb(text=_lang["close"], callback_data="help close", style=ButtonStyle.PRIMARY),
+                    self.ikb(text=_lang["close"], callback_data="help close", style=ButtonStyle.DANGER),
                 ]
             )
 
