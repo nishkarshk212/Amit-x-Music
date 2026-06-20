@@ -114,6 +114,7 @@ class MongoDB:
     # ASSISTANT METHODS
     async def set_assistant(self, chat_id: int) -> int:
         if not userbot.clients:
+            self.assistant[chat_id] = 1
             return 1
         num = randint(1, len(userbot.clients))
         await self.assistantdb.update_one(
@@ -127,7 +128,7 @@ class MongoDB:
     async def get_assistant(self, chat_id: int):
         from Amit import anon
 
-        if not anon.clients:
+        if not anon.clients or not userbot.clients:
             return None
             
         if chat_id not in self.assistant:
