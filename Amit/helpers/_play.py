@@ -48,6 +48,9 @@ def checkUB(play):
 
         if chat_id not in db.active_calls:
             client = await db.get_client(chat_id)
+            if not client:
+                return await m.reply_text(m.lang.get("play_no_assistant", "No assistant available. Please add a userbot session first."))
+                
             try:
                 member = await app.get_chat_member(chat_id, client.id)
                 if member.status in [

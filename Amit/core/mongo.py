@@ -137,8 +137,11 @@ class MongoDB:
         
         index = self.assistant[chat_id] - 1
         if index < 0 or index >= len(anon.clients):
-            return None
-
+            # Regenerate assistant number if current one is invalid
+            num = await self.set_assistant(chat_id)
+            index = num - 1
+            if index < 0 or index >= len(anon.clients):
+                return None
         return anon.clients[index]
 
     async def get_client(self, chat_id: int):

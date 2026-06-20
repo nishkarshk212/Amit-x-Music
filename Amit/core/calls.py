@@ -163,6 +163,8 @@ class TgCall(PyTgCalls):
 
 
     async def ping(self) -> float:
+        if not self.clients:
+            return 0.0
         pings = [client.ping for client in self.clients]
         return round(sum(pings) / len(pings), 2)
 
