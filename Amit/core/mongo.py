@@ -147,12 +147,12 @@ class MongoDB:
     async def get_client(self, chat_id: int):
         if not userbot.clients:
             return None
-            
         if chat_id not in self.assistant:
             await self.get_assistant(chat_id)
-        return {1: userbot.one, 2: userbot.two, 3: userbot.three}.get(
-            self.assistant[chat_id]
-        )
+        num = self.assistant[chat_id]
+        if num < 1 or num > 3:
+            num = await self.set_assistant(chat_id)
+        return {1: userbot.one, 2: userbot.two, 3: userbot.three}.get(num)
 
     # BLACKLIST METHODS
     async def add_blacklist(self, chat_id: int) -> None:
