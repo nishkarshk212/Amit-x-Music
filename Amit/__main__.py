@@ -16,7 +16,12 @@ from Amit.plugins import all_modules
 async def main():
     await db.connect()
     await app.boot()
-    await userbot.boot()
+    
+    try:
+        await userbot.boot()
+    except Exception as ex:
+        logger.warning(f"Userbot failed to start: {ex}")
+    
     await anon.boot()
 
     for module in all_modules:
