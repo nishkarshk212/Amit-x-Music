@@ -34,13 +34,18 @@ class Bot(pyrogram.Client):
         self.username = self.me.username
         self.mention = self.me.mention
 
+        logger.info(f"Trying to send startup message to LOGGER_ID={self.logger} (type: {type(self.logger)})")
         try:
-            await self.send_message(self.logger, "Bot Started")
+            chat = await self.get_chat(self.logger)
+            logger.info(f"Got chat info: {chat.id}, title={chat.title if hasattr(chat, 'title') else 'N/A'}")
+            await self.send_message(self.logger, "🤖 Bot Started Successfully!\nUsername: @{}\nID: {}".format(self.username, self.id))
             get = await self.get_chat_member(self.logger, self.id)
             if get.status != pyrogram.enums.ChatMemberStatus.ADMINISTRATOR:
                 logger.warning("Please promote the bot as an admin in logger group for full functionality.")
         except Exception as ex:
-            logger.warning(f"Bot has failed to access the log group: {self.logger}\nReason: {ex}")
+            logger.warning(f"Bot has failed to access the log group: {self.logger}\nReason: {type(ex)} - {ex}")
+            import traceback
+            logger.warning(f"Stack trace: {traceback.format_exc()}")
         logger.info(f"Bot started as @{self.username}")
 
     async def exit(self):
