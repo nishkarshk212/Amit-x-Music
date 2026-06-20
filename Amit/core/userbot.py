@@ -21,7 +21,10 @@ class Userbot(Client):
         for key, string_key in clients.items():
             name = f"AmitUB{key[-1]}"
             session = getattr(config, string_key)
-            logger.info(f"Initializing client {key} with session from {string_key}, session={repr(session[:50])}...")
+            if session:
+                logger.info(f"Initializing client {key} with session from {string_key}, session={repr(session[:50])}...")
+            else:
+                logger.info(f"Client {key} has no session (from {string_key}), skipping initialization...")
             setattr(
                 self,
                 key,
