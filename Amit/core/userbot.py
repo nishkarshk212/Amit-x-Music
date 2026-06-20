@@ -72,11 +72,20 @@ class Userbot(Client):
         Asynchronously starts the assistants.
         """
         if config.SESSION1:
-            await self.boot_client(1, self.one)
+            try:
+                await self.boot_client(1, self.one)
+            except Exception as ex:
+                logger.warning(f"Assistant 1 failed to start: {type(ex)} {ex}")
         if config.SESSION2:
-            await self.boot_client(2, self.two)
+            try:
+                await self.boot_client(2, self.two)
+            except Exception as ex:
+                logger.warning(f"Assistant 2 failed to start: {type(ex)} {ex}")
         if config.SESSION3:
-            await self.boot_client(3, self.three)
+            try:
+                await self.boot_client(3, self.three)
+            except Exception as ex:
+                logger.warning(f"Assistant 3 failed to start: {type(ex)} {ex}")
 
     async def exit(self):
         """

@@ -20,7 +20,9 @@ async def main():
     try:
         await userbot.boot()
     except Exception as ex:
-        logger.warning(f"Userbot failed to start: {ex}")
+        import traceback
+        logger.warning(f"Userbot failed to start: {type(ex)} {ex}")
+        logger.warning(f"Stack trace:\n{traceback.format_exc()}")
     
     await anon.boot()
 
