@@ -21,6 +21,7 @@ class Userbot(Client):
         for key, string_key in clients.items():
             name = f"AmitUB{key[-1]}"
             session = getattr(config, string_key)
+            logger.info(f"Initializing client {key} with session from {string_key}, session={repr(session[:50])}...")
             setattr(
                 self,
                 key,
@@ -29,6 +30,7 @@ class Userbot(Client):
                     api_id=config.API_ID,
                     api_hash=config.API_HASH,
                     session_string=session,
+                    in_memory=True  # Add in_memory=True to avoid file reading!
                 ),
             )
 
