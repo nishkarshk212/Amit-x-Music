@@ -30,13 +30,17 @@ class Config:
         self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", "5400"))
         self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", "20"))
         self.YOUTUBE_API_KEY = getenv("YOUTUBE_API_KEY", "INFLEX68575028D")
+        self.YT_API_KEY = getenv("YT_API_KEY", None)
+        self.YTPROXY_URL = getenv("YTPROXY_URL", None)
+        self.ARU_API_KEY = getenv("ARU_API_KEY", None)
+        self.ARU_API_URL = getenv("ARU_API_URL", None)
         self.COOKIES_URL = [
             url for url in getenv("COOKIES_URL", "").split(" ")
             if url and "batbin.me" in url
         ]
-        self.DEFAULT_THUMB = getenv("DEFAULT_THUMB", "https://te.legra.ph/file/3e40a408286d4eda24191.jpg")
-        self.PING_IMG = getenv("PING_IMG", "https://files.catbox.moe/haagg2.png")
-        self.START_IMG = getenv("START_IMG", "https://files.catbox.moe/zvziwk.jpg")
+        self.DEFAULT_THUMB = getenv("DEFAULT_THUMB", "https://i.ibb.co/WppbqXQn/cat-clouds-looking-stars.jpg")
+        self.PING_IMG = getenv("PING_IMG", "https://i.ibb.co/Qjn7y0qp/anime-style-animal-digital-art.jpg")
+        self.START_IMG = getenv("START_IMG", "https://i.ibb.co/n80Z3Mx3/medium-shot-anime-woman-hugging-cat.jpg")
 
     def check(self):
         missing = [
