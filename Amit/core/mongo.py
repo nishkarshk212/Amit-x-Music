@@ -113,6 +113,8 @@ class MongoDB:
 
     # ASSISTANT METHODS
     async def set_assistant(self, chat_id: int) -> int:
+        if not userbot.clients:
+            return 1
         num = randint(1, len(userbot.clients))
         await self.assistantdb.update_one(
             {"_id": chat_id},
@@ -125,14 +127,24 @@ class MongoDB:
     async def get_assistant(self, chat_id: int):
         from Amit import anon
 
+        if not anon.clients:
+            return None
+            
         if chat_id not in self.assistant:
             doc = await self.assistantdb.find_one({"_id": chat_id})
             num = doc["num"] if doc else await self.set_assistant(chat_id)
             self.assistant[chat_id] = num
+        
+        index = self.assistant[chat_id] - 1
+        if index < 0 or index >= len(anon.clients):
+            return None
 
-        return anon.clients[self.assistant[chat_id] - 1]
+        return anon.clients[index]
 
     async def get_client(self, chat_id: int):
+        if not userbot.clients:
+            return None
+            
         if chat_id not in self.assistant:
             await self.get_assistant(chat_id)
         return {1: userbot.one, 2: userbot.two, 3: userbot.three}.get(
